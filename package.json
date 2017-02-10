@@ -1,0 +1,22 @@
+{
+	"name": "DaniellesWebsite",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/drryanjames/Danielles-Website.git",
+	"author": "Ryan James <rcjames1004@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "node ."
+	},
+	"devDependencies": {
+		"babel-preset-latest": "^6.22.0",
+		"del": "^2.2.2",
+		"gulp": "^3.9.1",
+		"gulp-babel": "^6.1.2"
+	},
+	"babel": {
+		"presets": [
+			"latest"
+		]
+	}
+}
