@@ -6,3 +6,5 @@ node_modules/
 /lib/
 
 yarn.lock
+
+/dist/client-bundle.js*
