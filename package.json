@@ -35,6 +35,7 @@
 				"error",
 				"windows"
 			],
+			"semi": [2],
 			"no-unexpected-multiline": 2,
 			"compat/compat": 2
 		},
