@@ -15,6 +15,7 @@
 		"del": "^2.2.2",
 		"eslint": "^3.15.0",
 		"eslint-config-airbnb": "^14.1.0",
+		"eslint-plugin-compat": "^1.0.2",
 		"eslint-plugin-import": "^2.2.0",
 		"eslint-plugin-jsx-a11y": "^4.0.0",
 		"eslint-plugin-react": "^6.9.0",
@@ -26,13 +27,16 @@
 	"eslintConfig": {
 		"extends": "airbnb",
 		"plugins": [
-			"import"
+			"import",
+			"compat"
 		],
 		"rules": {
 			"linebreak-style": [
 				"error",
 				"windows"
-			]
+			],
+			"no-unexpected-multiline": 2,
+			"compat/compat": 2
 		},
 		"env": {
 			"browser": true
@@ -44,9 +48,14 @@
 			"react"
 		]
 	},
+	"browserslist": [
+		"> 1%"
+	],
 	"dependencies": {
 		"babel-polyfill": "^6.23.0",
 		"react": "^15.4.2",
-		"react-dom": "^15.4.2"
+		"react-dom": "^15.4.2",
+		"react-router": "next",
+		"react-router-dom": "next"
 	}
 }
