@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn dev:start",
-    "preinstall": "yarn prod:stop",
     "postinstall": "yarn prod:build && yarn prod:start",
     "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
     "dev:wds": "webpack-dev-server --progress",
