@@ -7,13 +7,20 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn dev:start",
-    "dev:start": "nodemon --ignore lib --exec babel-node src/server"
+    "dev:start": "nodemon --ignore lib --exec babel-node src/server",
+    "prod:build": "rimraf lib && babel src -d lib --ignore .test.js",
+    "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
+    "prod:stop": "pm2 delete server",
+    "test": "eslint src",
+    "precommit": "yarn test",
+    "prepush": "yarn test && yarn prod:build"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "cross-env": "^3.2.4",
     "del": "^2.2.2",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
@@ -21,9 +28,12 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
+    "flow": "^0.2.3",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^3.0.1",
+    "pm2": "^2.4.2",
+    "rimraf": "^2.6.1",
     "webpack-stream": "^3.2.0"
   },
   "eslintConfig": {
@@ -38,10 +48,16 @@
         "windows"
       ],
       "semi": [
-        2
+        2,
+        "never"
       ],
       "no-unexpected-multiline": 2,
-      "compat/compat": 2
+      "compat/compat": 2,
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "no-tabs": 0
     },
     "env": {
       "browser": true
