@@ -7,8 +7,6 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn dev:start",
-    "preinstall": "yarn prod:build",
-    "postinstall": "yarn prod:start",
     "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
     "dev:wds": "webpack-dev-server --progress",
     "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
