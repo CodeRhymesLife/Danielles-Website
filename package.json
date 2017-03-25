@@ -93,6 +93,7 @@
     "babel-polyfill": "^6.23.0",
     "compression": "^1.6.2",
     "express": "^4.15.2",
+    "immutable": "4.0.0-rc.2",
     "nodemon": "^1.11.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

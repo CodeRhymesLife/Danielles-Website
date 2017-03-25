@@ -3,20 +3,3 @@ body {
   margin: auto;
   font-family: sans-serif;
 }
-
-.comingSoonContainer { 
-	height: 100%;
-	width: 100%;
-    position: relative;
-}
-
-.comingSoon {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    font-style: italic;
-    font-family: comic sans-serif;
-}
