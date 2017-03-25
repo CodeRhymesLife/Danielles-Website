@@ -10,8 +10,7 @@ import {
 	BLOG_PAGE_ROUTE,
 	CONTACT_PAGE_ROUTE,
 	SUBSCRIBE_PAGE_ROUTE,
-	NOT_FOUND_DEMO_PAGE_ROUTE,
-} from '../../shared/routes'
+} from '../routes'
 
 const Nav = () =>
 	<nav>
@@ -24,7 +23,6 @@ const Nav = () =>
 				{ route: BLOG_PAGE_ROUTE, label: 'Blog' },
 				{ route: CONTACT_PAGE_ROUTE, label: 'Contact' },
 				{ route: SUBSCRIBE_PAGE_ROUTE, label: 'Subscribe' },
-				{ route: NOT_FOUND_DEMO_PAGE_ROUTE, label: '404 Demo' },
 			].map(link => (
 				<li key={link.route}>
 					<NavLink to={link.route} activeStyle={{ color: 'limegreen' }} exact>{link.label}</NavLink>
