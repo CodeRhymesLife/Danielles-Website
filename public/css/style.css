@@ -1,5 +1,26 @@
 body {
-  width: 960px;
-  margin: auto;
-  font-family: sans-serif;
+	font-family: sans-serif;
+}
+
+button.navbar-toggle {
+	margin-right: 40px;
+}
+
+@media (min-width: 768px) {
+	.navbar .navbar-nav {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	}
+
+	.navbar .navbar-collapse {
+		text-align: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar .navbar-collapse {
+		float: right;
+		text-align: left;
+	}
 }
