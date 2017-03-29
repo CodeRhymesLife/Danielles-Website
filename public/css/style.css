@@ -1,6 +1,36 @@
 body {
 	font-family: sans-serif;
-	background-color: #C6DDEF !important;
+}
+
+/* You could use :after - it doesn't really matter */
+body:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+	opacity: 0.3;
+	background-image: url("../images/3px-tile.png");
+}
+
+body:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+	background-color: #C6DDEF;
+}
+
+.navbar.navbar-default {
+	background: none;
+	border: none;
 }
 
 button.navbar-toggle {
