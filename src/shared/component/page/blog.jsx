@@ -14,7 +14,7 @@ const BlogPage = () =>
 				{ property: 'og:title', content: title },
 			]}
 		/>
-		<p>Blog</p>
+		<h1>Blog</h1>
 	</div>
 
 export default BlogPage

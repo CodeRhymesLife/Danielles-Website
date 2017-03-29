@@ -30,17 +30,19 @@ const App = () =>
 	<div>
 		<Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
 		<Nav />
-		<Switch>
-			<Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
-			<Route path={ABOUT_PAGE_ROUTE} render={() => <AboutPage />} />
-			<Route path={BOOKS_PAGE_ROUTE} render={() => <BooksPage />} />
-			<Route path={ARTICLES_PAGE_ROUTE} render={() => <ArticlesPage />} />
-			<Route path={BLOG_PAGE_ROUTE} render={() => <BlogPage />} />
-			<Route path={CONTACT_PAGE_ROUTE} render={() => <ContactPage />} />
-			<Route path={SUBSCRIBE_PAGE_ROUTE} render={() => <SubscribePage />} />
-			<Route path={ERROR_PAGE_ROUTE} render={() => <ErrorPage />} />
-			<Route component={NotFoundPage} />
-		</Switch>
+		<div className="appContent">
+			<Switch>
+				<Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
+				<Route path={ABOUT_PAGE_ROUTE} render={() => <AboutPage />} />
+				<Route path={BOOKS_PAGE_ROUTE} render={() => <BooksPage />} />
+				<Route path={ARTICLES_PAGE_ROUTE} render={() => <ArticlesPage />} />
+				<Route path={BLOG_PAGE_ROUTE} render={() => <BlogPage />} />
+				<Route path={CONTACT_PAGE_ROUTE} render={() => <ContactPage />} />
+				<Route path={SUBSCRIBE_PAGE_ROUTE} render={() => <SubscribePage />} />
+				<Route path={ERROR_PAGE_ROUTE} render={() => <ErrorPage />} />
+				<Route component={NotFoundPage} />
+			</Switch>
+		</div>
 	</div>
 
 export default App

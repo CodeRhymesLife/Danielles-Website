@@ -14,7 +14,7 @@ const ContactPage = () =>
 				{ property: 'og:title', content: title },
 			]}
 		/>
-		<p>Contact</p>
+		<h1>Contact</h1>
 	</div>
 
 export default ContactPage

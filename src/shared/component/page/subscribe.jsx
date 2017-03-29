@@ -14,7 +14,7 @@ const SubscribePage = () =>
 				{ property: 'og:title', content: title },
 			]}
 		/>
-		<p>Subscribe</p>
+		<h1>Subscribe</h1>
 	</div>
 
 export default SubscribePage

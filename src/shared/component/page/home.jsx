@@ -13,7 +13,7 @@ const HomePage = () =>
 				{ property: 'og:title', content: APP_NAME },
 			]}
 		/>
-		<p>Home</p>
+		<h1>Home</h1>
   </div>
 
 export default HomePage

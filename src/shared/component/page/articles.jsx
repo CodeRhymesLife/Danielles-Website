@@ -14,7 +14,7 @@ const ArticlesPage = () =>
 				{ property: 'og:title', content: title },
 			]}
 		/>
-		<p>Articles</p>
+		<h1>Articles</h1>
 	</div>
 
 export default ArticlesPage

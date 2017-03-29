@@ -14,7 +14,7 @@ const NotFoundPage = () =>
 				{ property: 'og:title', content: title },
 			]}
 		/>
-		<p>Page Not Found</p>
+		<h1>Page Not Found</h1>
 	</div>
 
 export default NotFoundPage

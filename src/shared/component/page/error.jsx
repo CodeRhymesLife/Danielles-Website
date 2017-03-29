@@ -14,7 +14,7 @@ const ErrorPage = () =>
 				{ property: 'og:title', content: title },
 			]}
 		/>
-		<p>Error</p>
+		<h1>Error</h1>
 	</div>
 
 export default ErrorPage
