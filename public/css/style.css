@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: Arial;
 }
 
 /* You could use :after - it doesn't really matter */
@@ -37,6 +37,11 @@ button.navbar-toggle {
 	margin-right: 40px;
 }
 
+.nav.navbar-nav {
+	float: right;
+	text-align: left;
+}
+
 @media (min-width: 768px) {
 	.navbar .navbar-nav {
 		display: inline-block;
@@ -46,12 +51,5 @@ button.navbar-toggle {
 
 	.navbar .navbar-collapse {
 		text-align: center;
-	}
-}
-
-@media (max-width: 767px) {
-	.navbar .navbar-collapse {
-		float: right;
-		text-align: left;
 	}
 }
