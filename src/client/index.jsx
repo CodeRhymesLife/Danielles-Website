@@ -10,6 +10,13 @@ import { BrowserRouter } from 'react-router-dom'
 import App from '../shared/app'
 import { APP_CONTAINER_SELECTOR } from '../shared/config'
 
+import $ from 'jquery'
+import Tether from 'tether'
+
+window.jQuery = $
+window.Tether = Tether
+require('bootstrap')
+
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
 
 const wrapApp = AppComponent =>
