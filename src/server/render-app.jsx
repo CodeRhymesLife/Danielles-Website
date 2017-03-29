@@ -1,5 +1,6 @@
 // @flow
 
+import Helmet from 'react-helmet'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import { StaticRouter } from 'react-router'
@@ -13,12 +14,14 @@ const renderApp = (location: string, plainPartialState: ?Object, routerContext: 
 		<StaticRouter location={location} context={routerContext}>
 			<App />
 		</StaticRouter>)
+	const head = Helmet.rewind()
 
 	return (
 		`<!doctype html>
 		<html>
 			<head>
-				<title>FIX ME</title>
+				${head.title}
+        		${head.meta}
 				<link rel="stylesheet" href="${STATIC_PATH_CSS}/style.css">
 				<link rel="stylesheet" href="${STATIC_PATH_CSS}/bootstrap.min.css">
 				<script src="${STATIC_PATH_JS}/jquery.min.js"></script>
