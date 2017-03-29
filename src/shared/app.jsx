@@ -27,7 +27,6 @@ import {
 
 const App = () =>
 	<div>
-		<h1>{APP_NAME}</h1>
 		<Nav />
 		<Switch>
 			<Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
