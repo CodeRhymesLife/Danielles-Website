@@ -110,6 +110,7 @@
     "react-hot-loader": "next",
     "react-router": "next",
     "react-router-dom": "next",
+    "tether": "^1.4.0",
     "yarn": "^0.21.3"
   }
 }

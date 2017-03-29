@@ -4,7 +4,7 @@ import compression from 'compression'
 import express from 'express'
 
 import routing from './routing'
-import { STATIC_PATH, STATIC_PATH_JS, WEB_PORT } from '../shared/config'
+import { STATIC_PATH, STATIC_PATH_CSS, WEB_PORT } from '../shared/config'
 import { isProd } from '../shared/utils'
 
 const app = express()
@@ -12,8 +12,7 @@ const app = express()
 app.use(compression())
 app.use(STATIC_PATH, express.static('dist'))
 app.use(STATIC_PATH, express.static('public'))
-app.use(STATIC_PATH, express.static('node_modules/bootstrap/dist')) // redirect bootstrap JS
-app.use(STATIC_PATH_JS, express.static('node_modules/jquery/dist')) // redirect JS jQuery
+app.use(STATIC_PATH_CSS, express.static('node_modules/bootstrap/dist/css')) // redirect bootstrap css
 
 routing(app)
 

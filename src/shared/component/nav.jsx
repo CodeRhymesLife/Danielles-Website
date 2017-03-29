@@ -11,6 +11,12 @@ import {
 	CONTACT_PAGE_ROUTE,
 	SUBSCRIBE_PAGE_ROUTE,
 } from '../routes'
+import $ from 'jquery'
+
+const handleNavLinkClick = () => {
+	$('body').scrollTop(0)
+	$('.js-navbar-collapse').collapse('hide')
+}
 
 const Nav = () =>
 	<nav className="navbar navbar-default">
@@ -37,7 +43,7 @@ const Nav = () =>
 						{ route: SUBSCRIBE_PAGE_ROUTE, label: 'Subscribe' },
 					].map(link => (
 						<li key={link.route}>
-							<NavLink to={link.route} activeStyle={{ color: 'limegreen' }} exact>{link.label}</NavLink>
+							<NavLink to={link.route} activeStyle={{ color: 'limegreen' }} exact onClick={handleNavLinkClick}>{link.label}</NavLink>
 						</li>
 					))}
 				</ul>

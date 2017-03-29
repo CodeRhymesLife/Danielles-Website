@@ -6,7 +6,7 @@ import ReactDOMServer from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 
 import App from './../shared/app'
-import { APP_CONTAINER_CLASS, STATIC_PATH, STATIC_PATH_JS, STATIC_PATH_CSS, WDS_PORT } from '../shared/config'
+import { APP_CONTAINER_CLASS, STATIC_PATH, STATIC_PATH_CSS, WDS_PORT } from '../shared/config'
 import { isProd } from '../shared/utils'
 
 const renderApp = (location: string, plainPartialState: ?Object, routerContext: ?Object = {}) => {
@@ -24,8 +24,6 @@ const renderApp = (location: string, plainPartialState: ?Object, routerContext: 
         		${head.meta}
 				<link rel="stylesheet" href="${STATIC_PATH_CSS}/style.css">
 				<link rel="stylesheet" href="${STATIC_PATH_CSS}/bootstrap.min.css">
-				<script src="${STATIC_PATH_JS}/jquery.min.js"></script>
-				<script src="${STATIC_PATH_JS}/bootstrap.min.js"></script>
 			</head>
 			<body>
 				<div class="${APP_CONTAINER_CLASS} container">${appHtml}</div>
