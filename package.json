@@ -108,6 +108,7 @@
     "react-dom": "^15.4.2",
     "react-helmet": "^5.0.1",
     "react-hot-loader": "next",
+    "react-jss": "^5.4.0",
     "react-router": "next",
     "react-router-dom": "next",
     "tether": "^1.4.0",

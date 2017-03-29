@@ -8,7 +8,7 @@ import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter } from 'react-router-dom'
 
 import App from '../shared/app'
-import { APP_CONTAINER_SELECTOR } from '../shared/config'
+import { APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR  } from '../shared/config'
 
 import $ from 'jquery'
 import Tether from 'tether'
@@ -27,6 +27,10 @@ const wrapApp = AppComponent =>
 	</BrowserRouter>
 
 ReactDOM.render(wrapApp(App), rootEl)
+
+const jssServerSide = document.querySelector(JSS_SSR_SELECTOR)
+// flow-disable-next-line
+jssServerSide.parentNode.removeChild(jssServerSide)
 
 if (module.hot) {
 	// flow-disable-next-line
