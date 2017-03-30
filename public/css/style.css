@@ -75,6 +75,7 @@ button.navbar-toggle {
 	z-index: -100;
 	opacity: 0.3;
 	background-color: white;
+	border-radius: 15px;
 }
 
 h1 {
