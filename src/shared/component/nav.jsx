@@ -15,7 +15,7 @@ import $ from 'jquery'
 
 const handleNavLinkClick = () => {
 	$('body').scrollTop(0)
-	$('.js-navbar-collapse').collapse('hide')
+	$('.navbar-collapse').collapse('hide')
 }
 
 const Nav = () =>
