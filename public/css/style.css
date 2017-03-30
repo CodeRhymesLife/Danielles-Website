@@ -61,7 +61,7 @@ button.navbar-toggle {
 
 .appContent {
 	position: relative;
-	padding-top: 20px;
+	padding: 20px;
 }
 
 .appContent:before {
