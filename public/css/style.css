@@ -1,31 +1,6 @@
 body {
 	font-family: Arial;
-}
-
-/* You could use :after - it doesn't really matter */
-body:after {
-	content: ' ';
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1000;
-	opacity: 0.3;
-	background-image: url("../images/3px-tile.png");
-}
-
-body:before {
-	content: ' ';
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1000;
-	background-color: #C6DDEF;
+	background-color: #C6DDEF !important;
 }
 
 .navbar.navbar-default {
@@ -61,23 +36,17 @@ button.navbar-toggle {
 
 .appContent {
 	position: relative;
-	padding: 20px;
+	padding: 20px 60px;
+	margin: 20px 60px;
+	background-color: #eff1f4;
 }
 
-.appContent:before {
-	content: ' ';
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -100;
-	opacity: 0.3;
-	background-color: white;
-	border-radius: 15px;
-}
-
-h1 {
+.appContent h1 {
 	text-align: center;
+	margin-bottom: 60px;
+}
+
+.appContent p {
+	text-align: justify;
+	text-justify: inter-word;
 }
