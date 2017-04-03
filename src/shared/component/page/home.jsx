@@ -64,7 +64,7 @@ const HomePage = ({ classes }: { classes: Object }) =>
 		<div className={"row justify-content-md-center " +classes.row}>
 			{[
 				{ imagePath: "linkedin-icon.png", href: "https://www.linkedin.com/in/danielle-hayden-writer/" },
-				{ imagePath: "facebook-icon.png", href: "https://www.facebook.com/lifelonglogophile" },
+				{ imagePath: "facebook-icon.png", href: "https://www.facebook.com/daniellehaydenwriter/" },
 				{ imagePath: "instagram-icon.png", href: "https://www.instagram.com/daniellehayden13" },
 				{ imagePath: "twitter-icon.png", href: "https://twitter.com/vellichor_" },
 			].map(iconData => (
