@@ -7,7 +7,7 @@ import injectSheet from 'react-jss'
 import { APP_NAME, STATIC_PATH_IMAGES } from '../../config'
 
 const styles = {
-	"mainImage" : {
+	mainImage : {
 		width: "250px",
 		height: "210px",
 		float: "left",
@@ -22,6 +22,22 @@ const styles = {
 			height: "105px",
 			float: "left",
 		},
+	},
+
+	row: {
+		'text-align': "center",
+	},
+
+	col: {
+		display: 'inline-block',
+		float: 'none',
+	},
+
+	socialIcon: {
+		display: 'inline-block',
+		width: "30px",
+		height: "30px",
+		float: 'none',
 	},
 }
 
@@ -44,6 +60,21 @@ const HomePage = ({ classes }: { classes: Object }) =>
 		<p>Ut consectetur erat ac ante dignissim, vel vulputate lectus dapibus. Donec cursus, orci eu convallis venenatis, orci diam ullamcorper odio, ut hendrerit lacus ante id dui. In sed pretium dui. Maecenas ac ex mauris. Nulla et justo interdum, efficitur sem ac, auctor lacus. Donec rhoncus erat vitae ligula bibendum dictum. Mauris sit amet congue ex, eget consectetur nulla. Ut non erat a sapien maximus facilisis. Integer tincidunt lacus id est feugiat, et efficitur urna condimentum.</p>
 
 		<p>Donec pretium quis diam nec molestie. Morbi accumsan tincidunt massa, in pulvinar lectus venenatis quis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vitae pretium erat. In vel pellentesque ante, vitae porttitor metus. Donec sit amet risus pellentesque, efficitur ligula at, consectetur sem. Maecenas fermentum finibus metus et blandit. Cras dapibus mauris ac dolor interdum gravida.</p>
+
+		<div className={"row justify-content-md-center " +classes.row}>
+			{[
+				{ imagePath: "linkedin-icon.png", href: "" },
+				{ imagePath: "facebook-icon.png", href: "" },
+				{ imagePath: "instagram-icon.png", href: "" },
+				{ imagePath: "twitter-icon.png", href: "" },
+			].map(iconData => (
+				<div key={iconData.imagePath} className={"col-md-1 " + classes.col}>
+					<a href={iconData.href}>
+						<img className={classes.socialIcon} src={STATIC_PATH_IMAGES + '/' + iconData.imagePath}  />
+					</a>
+				</div>
+			))}
+		</div>
   </div>
 
 export default injectSheet(styles)(HomePage)
