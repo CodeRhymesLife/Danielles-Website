@@ -63,13 +63,13 @@ const HomePage = ({ classes }: { classes: Object }) =>
 
 		<div className={"row justify-content-md-center " +classes.row}>
 			{[
-				{ imagePath: "linkedin-icon.png", href: "" },
-				{ imagePath: "facebook-icon.png", href: "" },
-				{ imagePath: "instagram-icon.png", href: "" },
-				{ imagePath: "twitter-icon.png", href: "" },
+				{ imagePath: "linkedin-icon.png", href: "https://www.linkedin.com/in/danielle-hayden-writer/" },
+				{ imagePath: "facebook-icon.png", href: "https://www.facebook.com/lifelonglogophile" },
+				{ imagePath: "instagram-icon.png", href: "https://www.instagram.com/daniellehayden13" },
+				{ imagePath: "twitter-icon.png", href: "https://twitter.com/vellichor_" },
 			].map(iconData => (
 				<div key={iconData.imagePath} className={"col-md-1 " + classes.col}>
-					<a href={iconData.href}>
+					<a href={iconData.href} target="_blank">
 						<img className={classes.socialIcon} src={STATIC_PATH_IMAGES + '/' + iconData.imagePath}  />
 					</a>
 				</div>
